@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>設立の想い - Grow Up Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+    /* --- index.html と共通のスタイル設定 (ヘッダー・ヒーロー画像) --- */
+    .header-logo-group {
+      height: 60px;
+      width: auto;
+    }
+    
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 全体背景のオーバーレイ */
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    /* 背景画像設定 */
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('image/connection_photo.jpg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center top;
+      filter: blur(2px);
+      transform: scale(1.05);
+      z-index: 0;
+      opacity: 0.8;
+    }
+    
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    /* --- 以下、message.html 専用のコンテンツスタイル --- */
+    
+    /* 各団体の紹介カード */
+    .org-section {
+      margin-bottom: 4rem;
+    }
+    
+    .org-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-left-width: 6px;
+      border-left-style: solid;
+    }
+
+    .org-card h3 {
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .org-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    .org-card ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    /* チェックマークの色はインラインで制御するため、共通部分のみ定義 */
+    .org-card ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .feature-tag {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    /* まとめセクション */
+    .summary-box {
+      background-color: #fff8e1; /* 薄いオレンジ背景 */
+      border: 2px solid #ffcc80;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 3rem auto 0 auto;
+    }
+
+    .summary-title {
+      color: #f57c00;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .role-flow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    
+    .role-item {
+      background: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* お問い合わせセクション */
+    .cta-section {
+      background-color: #ffffff;
+      border: 2px solid #669933;
+    }
+
+    /* レスポンシブ調整 */
+    @media (max-width: 768px) {
+      .role-flow {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <header>
+    <div class="container header-flex">
+      <h1>
+        <a href="index.html" class="site-title">
+          <img src="image/connection_logo.png" alt="Grow Upグループ ロゴ" class="header-logo header-logo-group">
+          <div class="title-text">
+            <span class="sub-title">新しい価値創造へ</span>
+            Grow Upグループ
+          </div>
+        </a>
+      </h1>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="message.html">設立の想い</a></li>
+          <li><a href="greeting.html">代表挨拶</a></li>
+          <li><a href="index.html#members">参画団体</a></li>
+          <li><a href="index.html#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="message.html">設立の想い</a></li>
+      <li><a href="greeting.html">代表挨拶</a></li>
+      <li><a href="index.html#members">参画団体</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <div class="content-wrapper">
+    <section class="page-hero">
+      <div class="hero-text">
+        <h2>設立の想い</h2>
+        <p style="font-size: 1.2rem; margin-top: 1rem;">About Grow Up Group</p>
+      </div>
+    </section>
+
+    <main class="container page-content">
+
+      <section class="section" style="text-align: center; margin-bottom: 4rem;">
+        <h3 class="section-title" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+          <i class="fas fa-seedling" style="color: #669933;"></i> Grow Upグループの目的
+        </h3>
+        <div style="max-width: 800px; margin: 0 auto; line-height: 2; text-align: left;">
+          <p>
+            Grow Upグループは、<strong>「Grow Up Academy」「レンディル浜松スポーツクラブ」「しずおかコネクト」</strong>の3つの団体が力を合わせて生まれた、地域と次世代を育てる総合プラットフォームです。
+          </p>
+          <p style="margin-top: 1rem;">
+            教育・スポーツ・学生支援という異なる得意分野を持ち寄り、<br>
+            <strong style="font-size: 1.1rem; color: #2c3e50; background: linear-gradient(transparent 60%, #e8f5e9 60%);">“浜松から未来を切り拓く人を育てること”</strong> を目的に活動しています。
+          </p>
+          
+          <div style="background-color: #f9f9f9; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
+            <p style="margin: 0; font-weight: bold; color: #55802b;">
+              Grow Up Academyが教育で土台をつくり、<br>
+              レンディル浜松がその力を現場で活かし、<br>
+              しずおかコネクトが人と地域をつなぐ。
+            </p>
+          </div>
+          
+          <p style="margin-top: 1.5rem;">
+            この循環を仕組みとして整えることで、<strong>「教育 → 実践 → 地域貢献」</strong>の流れを自然に生み出しています。
+          </p>
+        </div>
+      </section>
+
+      <section class="org-section">
+        <h2 class="section-title">各団体の役割</h2>
+
+        <div class="org-card" style="border-left-color: #1b5e20;">
+          <h3 style="color: #1b5e20;"><i class="fas fa-school"></i> Grow Up Academy（教育・人材育成）</h3>
+          <p>Grow Up Academyは、グループの中で最も<strong>「教育」と「育成」</strong>に特化した組織です。</p>
+          <ul>
+            <li style="color: #2c3e50;"><span style="color: #1b5e20; position: absolute; left: 0; font-weight: bold;">✔</span> 指導法・教育ノウハウを活かした人材育成プログラムや企業研修を実施</li>
+            <li style="color: #2c3e50;"><span style="color: #1b5e20; position: absolute; left: 0; font-weight: bold;">✔</span> レンディル浜松の現場へ教育メソッドを導入し、指導の質向上や育成システムづくりを担当</li>
+            <li style="color: #2c3e50;"><span style="color: #1b5e20; position: absolute; left: 0; font-weight: bold;">✔</span> しずおかコネクトと連携して、研修 → 実践 → 活躍の流れを設計</li>
+          </ul>
+          <div class="feature-tag" style="background-color: #e8f5e9; color: #1b5e20;">
+            📌 特徴：教育の品質保証と指導体系の中心
+          </div>
+        </div>
+
+        <div class="org-card" style="border-left-color: #8d1c2c;">
+          <h3 style="color: #8d1c2c;"><i class="fas fa-futbol"></i> レンディル浜松スポーツクラブ（実践・地域連携）</h3>
+          <p>レンディル浜松は、スポーツや文化活動を通じて、学びを<strong>“実際の体験”</strong>につなげるフィールドを提供しています。</p>
+          <ul>
+            <li style="color: #2c3e50;"><span style="color: #8d1c2c; position: absolute; left: 0; font-weight: bold;">✔</span> 子どもから大人まで参加できるスポーツ・文化の場を運営</li>
+            <li style="color: #2c3e50;"><span style="color: #8d1c2c; position: absolute; left: 0; font-weight: bold;">✔</span> 部活動移行先や地域クラブの指導者を登録・派遣し、地域の指導者マネジメントを担当</li>
+            <li style="color: #2c3e50;"><span style="color: #8d1c2c; position: absolute; left: 0; font-weight: bold;">✔</span> Academyで学んだ教育メソッドを現場に導入し、チーム運営や地域イベントまで幅広くサポート</li>
+          </ul>
+          <div class="feature-tag" style="background-color: #fae3e5; color: #8d1c2c;">
+            📌 特徴：地域に一番近い「現場力」が強み
+          </div>
+        </div>
+
+        <div class="org-card" style="border-left-color: #0088cc;">
+          <h3 style="color: #0088cc;"><i class="fas fa-graduation-cap"></i> しずおかコネクト（学生マッチング・地域ネットワーク）</h3>
+          <p>しずおかコネクトは、学生 × 地域企業 × 団体をつなぐ<strong>ネットワークハブ</strong>として機能しています。</p>
+          <ul>
+            <li style="color: #2c3e50;"><span style="color: #0088cc; position: absolute; left: 0; font-weight: bold;">✔</span> 学生を発掘し、企業・団体へつなげるマッチングの専門家</li>
+            <li style="color: #2c3e50;"><span style="color: #0088cc; position: absolute; left: 0; font-weight: bold;">✔</span> Grow Up Academyの教育を学生に接続し、即戦力として活躍できる力を育成</li>
+            <li style="color: #2c3e50;"><span style="color: #0088cc; position: absolute; left: 0; font-weight: bold;">✔</span> レンディル浜松の現場やイベントを、学生が挑戦できる実践の場として提供</li>
+            <li style="color: #2c3e50;"><span style="color: #0088cc; position: absolute; left: 0; font-weight: bold;">✔</span> 地域企業のCSR活動や産学連携もサポート</li>
+          </ul>
+          <div class="feature-tag" style="background-color: #e1f5fe; color: #0088cc;">
+            📌 特徴：人と地域をつなぐ「接続力」が武器
+          </div>
+        </div>
+
+      </section>
+
+      <section class="summary-box">
+        <div class="summary-title">🔶 3つの団体の役割まとめ</div>
+        <div class="role-flow">
+          <div class="role-item" style="color: #1b5e20;"><i class="fas fa-school"></i> Academy<br>育てる（教育）</div>
+          <div style="display:flex; align-items:center; color:#ccc;"><i class="fas fa-plus"></i></div>
+          <div class="role-item" style="color: #8d1c2c;"><i class="fas fa-futbol"></i> レンディル<br>活かす（現場）</div>
+          <div style="display:flex; align-items:center; color:#ccc;"><i class="fas fa-plus"></i></div>
+          <div class="role-item" style="color: #0088cc;"><i class="fas fa-graduation-cap"></i> コネクト<br>つなぐ（マッチング）</div>
+        </div>
+        <p style="margin-top: 1.5rem; font-weight: 500;">
+          この3つが揃うことで、Grow Upグループは地域と人を育てる大きな循環を生み出しています。
+        </p>
+      </section>
+
+      <section class="cta-section" id="contact" style="margin-top: 4rem;">
+        <h2 style="color: #55802b;">私たちの活動に参加しませんか？</h2>
+        <p style="margin: 1rem 0;">
+          協業パートナー、学生メンバー、取材のご依頼など、お気軽にご連絡ください。
+        </p>
+        <a href="mailto:campustocommunityshizuoka@gmail.com" class="btn">
+            <i class="fas fa-envelope"></i> お問い合わせはこちら
+        </a>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>© 2025 Grow Up Group. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/shizuoka_connect?igsh=OXMyazhjcWQ0aW8y" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:campustocommunityshizuoka@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="javascript.js"></script>
+</body>
+</html>

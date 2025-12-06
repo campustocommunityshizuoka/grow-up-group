@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grow Up Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+    /* このページ専用の微調整 */
+    .header-logo-group {
+      height: 60px;
+      width: auto;
+    }
+    .hero-text-sub {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+    }
+    
+    /* お問い合わせセクション */
+    .cta-section {
+      background-color: #ffffff; /* 背景は白 */
+      border: 2px solid #669933; /* 枠線を若草色に変更 */
+    }
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 全体背景のオーバーレイ */
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    /* 追加したい背景画像 */
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('image/connection_photo.jpg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center top;
+      filter: blur(2px);
+      transform: scale(1.05);
+      z-index: 0;
+      opacity: 0.8;
+    }
+    
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <header>
+    <div class="container header-flex">
+      <h1>
+        <a href="index.html" class="site-title">
+          <img src="image/connection_logo.png" alt="Grow Upグループ ロゴ" class="header-logo header-logo-group">
+          <div class="title-text">
+            <span class="sub-title">新しい価値創造へ</span>
+            Grow Up Group
+          </div>
+        </a>
+      </h1>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="message.html">設立の想い</a></li>
+          <li><a href="greeting.html">代表挨拶</a></li>
+          <li><a href="#members">参画団体</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="message.html">設立の想い</a></li>
+      <li><a href="greeting.html">代表挨拶</a></li>
+      <li><a href="#members">参画団体</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <div class="content-wrapper">
+    <section class="page-hero">
+      <div class="hero-image-segment segment-1" style="background-image: url('image/fujisann.jpg');"></div>
+      <div class="hero-image-segment segment-2" style="background-image: url('image/hatake.jpg');"></div>
+      <div class="hero-image-segment segment-3" style="background-image: url('image/taki.jpg');"></div>
+      <div class="hero-text">
+        <p class="hero-text-sub">地域・教育・キャリアの総合支援体制</p>
+        <h2>3つの力が一つに。Grow Upグループ誕生</h2>
+      </div>
+    </section>
+
+    <main class="container page-content">
+
+      <section id="about" style="padding-top: 2rem;">
+        <h2 class="section-title">🤝 グループ協業の目的</h2>
+        <p class="intro-text">
+          この度、「地域と学生をつなぐ会 しずおかコネクト」を含む三団体が連携し、Grow Upグループとしての活動を本格的にスタートします。<br>
+          地域社会の活性化、学生のキャリア育成、そして次世代の教育支援をシームレスに展開します。
+        </p>
+
+        <div class="three-column-grid">
+          <div class="service-card card card-icon-only">
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <h3>キャリア・就職支援</h3>
+            <p>学生・若者に特化した実践的なキャリア教育と、企業とのマッチングを強化します。</p>
+          </div>
+          <div class="service-card card card-icon-only">
+            <div class="icon"><i class="fas fa-school"></i></div>
+            <h3>次世代教育プログラム</h3>
+            <p>プログラミング教育や英語教育など、未来を担う子どもたちへの質の高い学びを提供します。</p>
+          </div>
+          <div class="service-card card card-icon-only">
+            <div class="icon"><i class="fas fa-city"></i></div>
+            <h3>地域社会への貢献</h3>
+            <p>学生のアイデアと労働力を地域企業の課題解決に活かし、地域経済の循環を促進します。</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="members">
+        <h2 class="section-title">✨ 参画団体のご紹介</h2>
+        <div class="feature-grid">
+          
+          <div class="service-card card">
+            <div class="card-image">
+              <img src="image/logo.png" alt="しずおかコネクト イメージ">
+            </div>
+            <h3>地域と学生をつなぐ会 しずおかコネクト</h3>
+            <p>地域企業と学生をプロジェクトで繋ぎ、実践的なスキルアップと地域貢献を両立させる活動を展開します。</p>
+            <div class="partner-card-buttons">
+              <a href="https://shizuokaconnect.web.app/" class="btn" target="_blank">
+                <i class="fas fa-link"></i> 詳細を見る
+              </a>
+            </div>            
+          </div>
+
+          <div class="service-card card">
+            <div class="card-image">
+              <img src="image/growuplogo.jpg" alt="Grow Up Academy イメージ">
+            </div>
+            <h3>一般社団法人 Grow Up Academy</h3>
+            <p>IT・プログラミング教育やグローバル人材育成など、次世代のための教育カリキュラムを開発・提供します。</p>
+            <div class="partner-card-buttons">
+              <a href="https://www.grow-up-academy.com/" class="btn" target="_blank">
+                <i class="fas fa-link"></i> 詳細を見る
+              </a>
+            </div>
+          </div>
+          
+          <div class="service-card card">
+            <div class="card-image">
+              <img src="image/rendil_logo.jpg" alt="レンディル浜松 イメージ">
+            </div>
+            <h3>一般社団法人 レンディル浜松スポーツクラブ</h3>
+            <p>地域密着型サッカークラブ運営、スポーツイベント企画、指導員の人材登録・紹介</p>
+            <div class="partner-card-buttons">
+              <a href="https://rendir-hamamatsu.com/" class="btn" target="_blank">
+                <i class="fas fa-link"></i> 詳細を見る
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+      <section id="news">
+        <h2 class="section-title">📢 最新情報</h2>
+        <div class="news-list-container">
+          <ul class="news-list">
+            <li><span class="date">2025/11/18</span><a href="#">Grow Upグループとしての協業体制を正式にスタートしました！</a></li>
+            <li><span class="date">2025/10/27</span><a href="#">Grow Upグループとして三団体での協力がスタートします</a></li>
+            <li><span class="date">2025/10/01</span><a href="#">一般社団法人 レンディル浜松スポーツクラブ様と連携！</a></li>
+            <li><span class="date">2025/10/01</span><a href="#">一般社団法人 Grow Up Academy様と連携！</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cta-section" id="contact">
+        <h2 style="color: #55802b;">この新しいグループ活動について、ご質問はありませんか？</h2>
+        <p style="margin: 1rem 0 1.5rem 0;">企業・団体の方、学生の方、メディアの方、どなたからのお問い合わせも歓迎いたします。</p>
+        <a href="mailto:campustocommunityshizuoka@gmail.com" class="btn">
+            <i class="fas fa-envelope"></i> お問い合わせはこちら
+        </a>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>© 2025 Grow Up Group. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/shizuoka_connect?igsh=OXMyazhjcWQ0aW8y" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:campustocommunityshizuoka@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="javascript.js"></script>
+</body>
+</html>
